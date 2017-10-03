@@ -1,13 +1,10 @@
 {
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
-    "rules": {
-        "no-use-before-define": 0,
-        "react/prefer-stateless-function": 1,
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] 
-    } 
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "no-use-before-define": 0,
+    "comma-dangle": 0,
+    "react/prefer-stateless-function": 1,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
 }
