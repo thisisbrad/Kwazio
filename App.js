@@ -10,7 +10,7 @@ export default class App extends React.Component {
       databaseURL: 'https://harambe-3266e.firebaseio.com',
       projectId: 'harambe-3266e',
       storageBucket: 'harambe-3266e.appspot.com',
-      messagingSenderId: '775519206694',
+      messagingSenderId: '775519206694'
     };
     firebase.initializeApp(config);
   }
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 });
