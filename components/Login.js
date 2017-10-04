@@ -4,6 +4,7 @@ import { MKTextField, MKColor, MKButton } from 'react-native-material-kit';
 
 const LoginButton = MKButton.coloredButton()
   .withText('LOGIN')
+  .withRippleLocation('center')
   .build();
 
 class Login extends Component {
@@ -13,7 +14,9 @@ class Login extends Component {
     error: null
   };
   onButtonPress = () => {
-    console.log('Clicked button!!!');
+    console.log(
+      '################# Clicked button!!! ######################################################## '
+    );
   };
   render() {
     return (
@@ -35,7 +38,7 @@ class Login extends Component {
         />
         <Text> {this.state.error} </Text>
         <View>
-          <LoginButton onPress={this.onButtonPress()} />
+          <LoginButton onPress={this.onButtonPress.bind(this)} />
         </View>
       </View>
     );
