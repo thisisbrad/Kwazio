@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MKTextField, MKColor, MKButton } from 'react-native-material-kit';
 
+const LoginButton = MKButton.coloredButton()
+  .withText('LOGIN')
+  .build();
+
 class Login extends Component {
   state = {
     email: '',
     password: '',
     error: null
+  };
+  onButtonPress = () => {
+    console.log('Clicked button!!!');
   };
   render() {
     return (
@@ -21,14 +28,27 @@ class Login extends Component {
         <MKTextField
           text={this.state.password}
           placeholder="Enter Password..."
+          textInputStyle={styles.fieldStyles}
           onTextChange={password => this.setState({ password })}
           tintColor={MKColor.Teal}
           password={true}
         />
         <Text> {this.state.error} </Text>
+        <View>
+          <LoginButton onPress={this.onButtonPress()} />
+        </View>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
 
 export default Login;
