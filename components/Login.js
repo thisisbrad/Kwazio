@@ -1,16 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
-import {
-  Container,
-  Header,
-  Content,
-  Button,
-  Text,
-  Form,
-  Item,
-  Input,
-  Label
-} from 'native-base';
+import { Content, Button, Text, Form, Item, Input, Label } from 'native-base';
 
 class Login extends Component {
   state = {
@@ -41,14 +30,5 @@ class Login extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
 
 export default Login;
