@@ -14,9 +14,7 @@ class Login extends Component {
     error: null
   };
   onButtonPress = () => {
-    console.log(
-      '################# Clicked button!!! ######################################################## '
-    );
+    console.log('###Clicked button!!! #### ');
   };
   render() {
     return (
