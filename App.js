@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Container, Header, Content, Button, Text } from 'native-base';
 import firebase from 'firebase';
 import Login from './components/Login';
 
@@ -17,19 +17,12 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Welcom to my CRM!</Text>
-        <Login />
-      </View>
+      <Container>
+        <Header />
+        <Content padder>
+          <Login />
+        </Content>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});

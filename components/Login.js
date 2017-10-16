@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Container, Header, Content, Button, Text } from 'native-base';
 
 class Login extends Component {
   state = {
@@ -12,12 +13,11 @@ class Login extends Component {
   };
   render() {
     return (
-      <View>
-        <Text>Login Form</Text>
-
-        <Text> {this.state.error} </Text>
-        <View />
-      </View>
+      <Content>
+        <Button full primary onPress={() => this.onButtonPress()}>
+          <Text>Click Me! </Text>
+        </Button>
+      </Content>
     );
   }
 }
