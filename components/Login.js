@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Container, Header, Content, Button, Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Content,
+  Button,
+  Text,
+  Form,
+  Item,
+  Input,
+  Label
+} from 'native-base';
 
 class Login extends Component {
   state = {
@@ -14,9 +24,19 @@ class Login extends Component {
   render() {
     return (
       <Content>
-        <Button full primary onPress={() => this.onButtonPress()}>
-          <Text>Click Me! </Text>
-        </Button>
+        <Form>
+          <Item floatingLabel>
+            <Label>Username</Label>
+            <Input />
+          </Item>
+          <Item floatingLabel last>
+            <Label>Password</Label>
+            <Input />
+          </Item>
+          <Button full primary onPress={() => this.onButtonPress()}>
+            <Text>Click Me! </Text>
+          </Button>
+        </Form>
       </Content>
     );
   }
